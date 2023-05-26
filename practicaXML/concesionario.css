@@ -1,0 +1,15 @@
+concesionario{
+		display: table;
+		border-spacing: 2px;
+		border:#845EFF 4px solid;
+		margin:10px:
+		}
+nombre,modelo,color,precio,potencia{
+		display: table-row;
+		padding: 2px;
+		text-align: center;
+	
+		}
+campos	{
+		font-weight: bold;
+		}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<automovil>
+		<nombre>x-01</nombre>
+		<modelo>2001</modelo>
+		<color>Azul</color>
+		<precio>30000</precio>
+		<potencia>90cv</potencia>
+	</automovil>

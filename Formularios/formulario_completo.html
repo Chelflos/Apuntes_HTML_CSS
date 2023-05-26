@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario completo</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+        <legend>Formulario de contacto</legend>
+            <label for="name">Nombre:</label>
+            <input id="name" type="text" name="name" required>
+            
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required>
+
+            <label for="phone">Teléfono</label>
+            <input id="phone" name="tel" type="tel" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="mss" required> </textarea>
+
+            <label for="subs"></label>
+            <input type="checkbox" id="subs" name="subs"checked>
+
+            <br><br>
+
+            <label for="gender">Género: </label>
+            <select id="gender" name="gender" required>
+              <option value="">Seleccione una opción</option>
+              <option value="male">Masculino</option>
+              <option value="famale">Femenino</option>
+              <option value="other">Otro</option>
+            </select>
+
+            <br><br>
+
+            <fieldset>
+              <legend>Preferencias del contacto</legend>
+
+              <label for="contact-preference-email"></label>
+              <input type="checkbox" id="contact-preference-email" name="contact-preference[]">
+              Correo
+
+              <label for="contact-preference-phone"></label>
+              <input type="checkbox" id="contact-preference-phone" value="phone" name="contact-preference[]">
+              Teléfono
+              
+              <label for="contact-preference-postal"></label>
+              <input type="checkbox" id="contact-preference-postal" value="postal" name="contact-preference[]">
+              Código postal
+            
+            </fieldset>
+
+            <br>
+            <input type="submit" value="Enviar">
+    </fieldset>
+
+  </form>
+</body>
+</html>

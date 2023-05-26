@@ -1,0 +1,40 @@
+div{
+    padding: 1%;
+}
+ table{
+    border-color: black;
+    border: 1px solid;
+    padding: 0%;
+    width: 100%;
+    margin: 0%;
+ }
+
+ td {
+    margin: 0%;
+    border-color: black;
+    border: 1px solid;
+    padding: 4px;
+    
+  }
+  h1{
+    text-align: left;
+  }
+ .text{
+    padding: px;
+    align-self: center;
+    justify-self: center;
+ }
+  .IDENTIFICADOR{
+    
+    width: 100%;
+  }
+  .dir{
+    margin: 18px;;
+  }
+  #COMENTARIOS{
+    align-content: center;
+    width: 96%;
+  }
+  .botones{
+    padding: 4px;
+  }

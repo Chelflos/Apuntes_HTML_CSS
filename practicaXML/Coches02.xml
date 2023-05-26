@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="concesionario.css"?>
+<concesionario>
+	<campos>
+		<nombre>Nombre</nombre>
+		<modelo>Modelo</modelo>
+		<color>Color</color>
+		<precio>Precio</precio>
+		<potencia>Potencia</potencia>
+	</campos>
+	<automovil>	
+		<nombre>x-01</nombre>
+		<modelo>2001</modelo>
+		<color>Azul</color>
+		<precio>30.000</precio>
+		<potencia>90cv</potencia>
+	</automovil>
+	
+	<automovil>
+		<nombre>x-02</nombre>
+		<modelo>2001</modelo>
+		<color>Rojo</color>
+		<precio>31.000</precio>
+		<potencia>95cv</potencia>
+	</automovil>
+	
+	<automovil>
+		<nombre>x-03</nombre>
+		<modelo>2003</modelo>
+		<color>Verde</color>
+		<precio>31.500</precio>
+		<potencia>100cv</potencia>
+	</automovil>
+	
+	<automovil>
+		<nombre>x-04</nombre>
+		<modelo>2004</modelo>
+		<color>Amarilo</color>
+		<precio>32.000</precio>
+		<potencia>120cv</potencia>
+	</automovil>
+	
+	<automovil>
+		<nombre>x-05</nombre>
+		<modelo>2005</modelo>
+		<color>Cian</color>
+		<precio>32.500</precio>
+		<potencia>140cv</potencia>
+	</automovil>
+</concesionario>

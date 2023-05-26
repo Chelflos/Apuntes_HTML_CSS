@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 02 Carlos Tenajas</title>
+        <meta charset="UTF-8">        
+        <link rel="stylesheet" href="ejercicio2.css">
+    </head>
+
+    <body>  
+       <div>      
+        <form action="formulario.php"  type="POST"  enctype="multipart/formdata">            
+            <table>  
+                <caption>
+                    <h1>Formulario de alta</h1>
+                  </caption>              
+                    <tr>
+                        <td class="IDENTIFICADOR" colspan="2">
+                            <label for="Identificador"> Identificador de nuevo usuario </label>
+                            <input type="text" id="Identificador" name="Identificador"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="NOMBRE">Nombre * </label>
+                            <input type="text" id="NOMBRE" name="NOMBRE" placeholder="Introduce tu nombre de usuario"/>
+                        </td>
+                        <td>
+                            <label for="APELLIDOS">Apellidos * </label>
+                            <input type="text" id="APELLIDOS" name="APELLIDOS" placeholder="Introduce tus apellidos"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="CONTRASENA">Nombre * </label>
+                            <input type="password" id="CONTRASENA" name="CONTRASENA" placeholder="Introduce la contraseña"/>
+                        </td>
+
+                        <td>
+                            <label for="CONFIRMAR">Apellidos * </label>
+                            <input type="password" id="CONFIRMAR" name="CONFIRMAR" placeholder="Introduce de nuevo la contraseña"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <label for="EMAIL"> Email </label>
+                            <input type="email" id="EMAIL" name="EMAIL" placeholder="Introduce tu correo electrónico"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"  >
+                            <label for="DIRECCION" class="dir"> Dirección </label>
+                            <textarea id="DIRECCION" name="DIRECCION"></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="SEXO">Sexo </label>
+                        </td>
+                        <td>
+                            <input type="radio" id="SEXO" name="SEXO" value="Hombre">Hombre</input>
+                            <input type="radio" id="SEXO" name="SEXO" value="Mujer">Mujer</input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <label for="PAIS"> País </label>
+                            <select name="PAIS" size="1">
+                                <option value="España">España</option>
+                                <option value="Italia">Italia</option>
+                                <option value="grecia">grecia</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="FOTO">Subir una foto </label>
+                            
+                        </td>
+                        <td class="botones">
+                            <input type="file" id="FOTO" name="FOTO"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <label for="COLOR"> Color de fondo </label>
+                                <input type="color">
+                            <select name="COLOR" size="4">                                
+                                <option value="Rojo">Rojo</option>
+                                <option value="Verde">Verde</option>
+                                <option value="Azul">Azul</option>
+                                <option value="Blanco">Blanco</option>
+                                <option value="Amarillo">Amarillo</option>
+                                <option value="Gris">Gris</option>
+                                <option value="Negro">Negro</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="Aficiones">Aficiones (selecciona alguna de la lista) </label>
+                        </td>
+
+                        <td>
+                            <input type="radio" id="Aficiones" name="Aficiones" value="Cine y TV">Cine y Tv</input><br>
+                            <input type="radio" id="Aficiones" name="Aficiones" value="Deporte">Deporte</input><br>
+                            <input type="radio" id="Aficiones" name="Aficiones" value="Viajar">Viajar</input><br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="COMENTARIOS">Comentarios adicionales </label>
+                        </td>
+
+                        <td>
+                            <textarea type="radio" id="COMENTARIOS" name="COMENTARIOS"></textarea>                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="botones" colspan="2">
+                            <input type="submit">
+                            <input type="reset">
+                        </td>                       
+                    </tr>
+            </table>
+        </form>
+     </div>
+    </body>
+</html>

@@ -1,0 +1,281 @@
+Apuntes CSS
+
+Conectar html con css:
+
+|!|Separar contenido CSS en una carpeta “CSS”.|!|
+1.	Un método, y por lo general el más recomendado es escribir el siguiente código en el head del html:
+<lin rel=”stylesheeet” href=”css/styles.css”>
+
+
+2.	Otra manera es a través de la etiqueta style:
+
+<style>
+	body{
+		backgrond-color:
+			#ffffff
+}
+</style>
+
+
+De esta manera el contenido de la etiqueta se aplicará únicamente al documento html en el que se encuentre.
+
+
+3.	CSS en línea. 
+No utilizar.
+Se aplica un estilo como atributo en una etiqueta. Es mala práctica, en desuso. Hay situaciones en las que puede ser necesario meter un estilo dentro de una etiqueta, pero lo correcto es hacerlo mediante javasrcipt.
+
+
+<h1 style=””background-color: #00ff00;”> conectar html y css</h1>
+
+
+4.	Regla import url y ruta del archivo. 
+No es recomendable, puesto que espera a que el documento html se cargue para aplicar el css, lo que resulta en visualizar cambios de estilo, tama;os, fuentes…y empobrece la UX.
+No se considera mala practica como tal, pero da una imagen pobre.
+No utilizar.
+
+
+@import url(css/styles.css);
+Sintaxis CSS
+
+Selector: El elemento al que vamos a aplicar estilos.
+Propiedad: Lo que vamos a cambiar.
+Valor: El nuevo  valor que vamos a dar a la propiedad.
+Propiedad:Valor  se le denomina declaración.
+Al conjunto de selector+declaración(es) se le denomina regla.
+
+
+Regla:
+body{	----------------------------------Selector
+Propiedad--------	background-color:”#213423;”  -------Valor
+				       |
+}		       |		
+        		       |
+				Declaracion
+
+
+Si un elemento está dentro de otro, es su hijo.
+Si dos o más elementos están al mismo nivel, son hermanos.
+
+
+
+
+
+Selectores
+El selector es el elemento al que vamos a aplicar estilos.  Existen diferentes tipos y se pueden mezclar e intercalar entre ellos.
+
+Selectores simpes:
+	Selectores elementales:
+•	Selector universal   *{ background-color:”#213423;”  }
+•	Selector de etiqueta escribiendo el nombre de la etiqueta en cuestión
+					Ej: h1{font-family:”arial;”}	
+
+	
+Selectores de atributo:
+
+•	Selector de ID  id del elemento mediate “#”
+			      Ej:  #title{ background-color:”#213423;” }
+No es recomendable aplicar estilos por ID, ya que van a ser estilos para un elemento único.
+
+•	Selector de clase clase del elemento mediante “.”
+			          Ej: .title{{ background-color:”#213423;” }
+	Las clases son case sensitive, sensibles a mayúsculas y minúsculas.
+	Los elementos html pueden tener un numero amplio de clases.
+
+
+
+
+
+
+Seleccvionar Otros tipos de Atributos.
+
+Mediante llaves cuadradas
+•	[Atributo]
+
+•	[Atributo=valor]
+
+
+•	[atributo^=valor]  Busca un atributo que empiece por el termino indicado.
+
+•	[atributo*=valor] Busca un atributo que contenga el termino indicado.
+
+•	[atributo$=valor] Busca un atributo que termine por el termino indicado.
+
+Selectores compuestos:
+
+Requieren mas de una palabra, una palabra y un símbolo etc…
+
+•	Selectores Agrupados
+En el caso de querer referenciar a un grupo de etiquetas para que tengan el mismo estilo, se declaran las etiquetas separadas por comas”,”y se escriben los atributos una única vez.
+
+Ej (con clases):
+.Text1,
+.Text2,
+.Text 3,
+.Text4{
+background-color: #ff00ff
+}
+Permite optimizar ahorrando líneas de código.
+Siempre que se pueda conviene agrupar etiquetas para optimizar.
+Es conveniente utilizar una hoja de estilos normalize para resear los estilos de todos los navegadores al mismo punto.
+
+
+
+
+Selectores Combinadores
+•	Selector descendiente
+Se utiliza para referenciar a un elemento concreto si está contenido dentro de otro(de forma descendente); a esto se le denomina seleccionar hijos. Estos elementos se declaran seguidos mediante espacios. No se recomienda que tenga más de dos elementos (aunque técnicamente no tiene límite).
+
+Ej: 
+
+Div .text1{
+	Background-color: “#544354”;
+}
+
+
+•	Selector de hermano siguiente
+
+Permite selecionar sólo al hermano siguiente mediante “+”
+
+Ej:
+
+.Text2+ Title2:{
+Background-color: “#544354”;
+}
+
+•	Selector de hermanos siguientes
+
+Permite selecionar a todos los hermanos siguientes mediante”~”
+
+.Text2 ~ p{
+Background-color: “#544354”;
+}
+
+
+•	Selector de hijo directo
+
+Selecciona SOLO los hijos directos mediante “>”
+.container > p{
+Background-color: “#544354”;
+}
+
+	Pseudoclases – Pseudoelementos
+
+
+Concepto de especificidad:
+Establece cómo de específico es un selector para saber que estilo aplicar.
+
+El cálculo se efectua con la siguiente fórmula:
+	Etiquetas y pseudoelementos valor 001
+	Clases,Atributos y Pseudocvlases valor 010
+	Id’s valor 100
+	Estilos en línea 1000
+	!important valor absoluto (no es conveniente utilizarlo, porque se pasa por el forro la especificidad)
+Cascada  Funciona siempre que la especificidad sobre el elmento sea la misma
+Herencia Es la capacidad que tienen algunos elementos de heredar algunas propiedades de sus elementos contenedores (padres, abuelos, etc.).
+
+
+
+
+
+
+
+
+Herencia
+
+Inherit: Forzar herencia
+Inital: Vuelve a estilos por defecto e invalida la herencia.
+
+
+Hay propiedades que se heredan y otras que no, por ejemplo generalmente la mayoría de estilos de colores y fuentes se heredan
+
+Mediante la palabra clave “inherit” podemos forzar la herencia de cualquier propiedad que de base no es heredada.
+
+Link{
+Color:inherit;
+}
+
+En caso contrario, si se quisiera evitar que un elemento herede propiedades, se puede hacer mediante la palabra clave “initial”.
+
+Link{
+Color:initial;
+}
+
+
+Prefijos Propietarios
+
+Cuando una propiedad css se empieza a convertir en un estándar (pero aún no lo es), necesitamos colocar ciertos prefijos para que los navegadores sean capaces de entenderlos.
+En   autoprefixer.github.io	podemos obtener estos prefijos que se van actualizando con el tiempo.
+Para implementar este código podemos valernos de programas como “prepros”
+
+Box model
+Una web se compone de cajas. Estas cajas tienen una serie de propiedades:
+•	Contenido
+•	Borde
+•	Padding distancia de borde al contenido(top, right, bottom, left)		 3(top,left y right,bottom) 2(top-bottom, left-right)1(a todos por igual).
+•	Margin Separación entre cajas. 4 (top, right, bottom, left) 3(top,left y		 right,bottom) 2(top-bottom, left-right)1(a todos por igual).
+•	Width Ancho
+•	HeightAlto
+
+Existen elementos de bloque y elementos de línea, y hay diferencias entre ellos, no todos se comportan igual ni tienen las mismas propiedades.
+Los elementos en línea no tienen medidas (with - height), los elementos en bloque si.
+Los elementos en línea solo tienen margen horizontal, no vertical.
+BOX SIZING
+
+Determina desde donde comienza la caja y los valores padding content y border
+box-sizing: border-box
+box-sizing: content-box
+
+En éste caso concreto, es una buena práctica utilizar el selector universal ”*”
+
+
+
+
+BORDER RADIUS
+
+Border-top-left-radius: 50px / 100px 	con estos dos radios haces una elipse en una esquina
+
+Border radius: 50px/100px	elipse
+
+Border radius: 50px/100px  50px/100px  50px/100px asignas valores elípticos a cada vertice
+
+
+
+
+
+
+
+
+
+OVERFLOW
+
+
+Con overflow se puede controlar el debordamiento de texto:
+Overflow: visible;
+Overflow: hidden;    Ocultas el contenido desbordado.
+Overflow: scroll;      Aparece una barra de sroll.
+Overflow: auto;       Aparece una barra de sroll si es necesario.
+Overflow-x: scroll  No suele dar buenos resultados y hay que corregirlo a posteriori porque tomar los dos valores x e y por el mismo valor
+
+OOverflow también puede servir para conseguir la maquetacionn deseada.
+
+
+
+DISPLAY
+
+Display:none;     	Hace que el elmento se cargue pero no se muestre
+Display:block;     	hacer que un elemento se comporte como elemento de bloque.
+Display: inline;   	hacer que un elemento se comporte como elemento de línea.
+Display: inline-block;	Hace que un elemento de línea, siga siendo de línea y admita valores de bloque.
+
+
+
+
+
+
+
+
+
+OUTLINE
+
+
+

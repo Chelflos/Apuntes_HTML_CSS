@@ -1,0 +1,104 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.flexbox{
+    display: flex; /*Convertimos al menú en flexbox*/
+    justify-content: space-between; /*Con esto le indicamos que margine todos los items que se encuentra adentro hacia la derecha e izquierda*/
+    align-items: center; /*con esto alineamos de manera vertical*/
+}
+.container{
+    margin: 80px;
+    width: 50%;
+    height: 400px;
+    max-width: 500px;
+    outline: 4px solid;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+/*
+Display:Grid  crea el grid y por defecto llena el contenedor repartiendo su contenido en filas.
+Grid-template-columns: repeat(numeroColumnas, unidad de medida de la columna)                      Crear Columnas.
+Ejemplos:
+Grid-template-columns: repeat(6, 1fr)
+Grid-template-columns: 1fr,1fr,1fr
+Grid-template-columns: 100px,1fr,10em
+;
+Grid-template-rows: repeat(numeroFilas, unidad de medida de la columna);                           Crear Filas.
+*/
+.container2{
+    margin: 80px;
+    width: 50%;
+    height: 400px;
+    max-width: 500px;
+    outline: 4px solid;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 120px 1fr 9em;
+}
+
+.elemento{
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    
+}
+.elemento1{
+    background-color: burlywood;
+
+}
+.elemento2{
+    background-color:blueviolet;
+}
+.elemento3{
+    background-color:cadetblue;
+}
+.elemento4{
+    background-color:darkblue;
+}
+.elemento5{
+    background-color:darkorchid;
+}
+.elemento6{
+    background-color:darkred;
+}
+.elemento7{
+    background-color: burlywood;
+    grid-row: 2/2;
+}
+.elemento8{
+    background-color:blueviolet;
+    grid-column: 2/2;
+    grid-row: 1/1;
+}
+.elemento9{
+    background-color:cadetblue;
+    grid-column: 3/3;
+    grid-row: 2/2;
+}
+.elemento10{
+    background-color:darkblue;
+    grid-column: 4/4;
+    grid-row: 3/3;
+}
+.elemento11{
+    background-color:darkorchid;
+    grid-column: 5/5;
+    grid-row: 2/2;
+}
+.elemento12{
+    background-color:darkred;
+    grid-column: 6/6;
+    grid-row: 2/1;
+}
+p{
+    font-weight: bold;
+    text-align: center;
+}
+.numeros{
+    margin: 0 auto;
+ 
+}

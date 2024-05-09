@@ -1,0 +1,35 @@
+.boton.cinco{
+    background: black;
+    transition: 1s ease all;
+}
+.boton.cinco span{
+    transition: .4s ease-in-out all;
+    position: absolute;
+    left: 40%;
+}
+.boton.cinco .icono{
+    transition: 0.3s ease-in-out all;
+    opacity: 0; 
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2; 
+    left: calc(-100%);    
+}
+
+.boton.cinco svg{
+    color: white;
+    width: 40px;
+    height: 40px;
+}
+.boton.cinco:hover{
+    background: #864093;
+}
+.boton.cinco:hover span{
+    left: 25%;
+}
+.boton.cinco:hover .icono{
+    left: calc(90% - 50px);
+    opacity: 1;
+   
+}

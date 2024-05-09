@@ -1,0 +1,29 @@
+/*
+Para este tipo de boton, la línea se crea metiendo un svg DENTRO del boton, con x e y a 0 con top y left a o y ocupando todo el botón.
+En rect das estilo a la línea, stroke da el color, stroke-dasharray, determina el espaciado entre líneas, stroke.dashoffset mueve de posicion las lineas 
+al tener un espaciado extremadamente grande e in moviendo la posicion hasta 0, crea el movimiento.
+*/
+.boton.seis{
+background: none;
+color: #000;
+}
+.boton.seis svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+.boton.seis rect{
+width: 100%;
+height: 100%;
+stroke: #000;
+stroke-width: 10px;
+stroke-dasharray: 1000;
+stroke-dashoffset: 1000;
+transition: .6s ease all;
+}
+.boton.seis:hover rect{
+    stroke-dashoffset: 0;
+}

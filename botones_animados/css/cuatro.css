@@ -1,0 +1,13 @@
+.boton.cuatro::after{
+    content:"";
+    width: 0%;
+    height: 100%;
+    background: #c16c6a;
+    position: absolute;
+    z-index: 1;
+    transition: 1.5s ease-in-out all;
+}
+.boton.cuatro:hover:after{
+width: 100%;
+background: #ce423d;
+}

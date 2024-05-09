@@ -1,0 +1,20 @@
+/*
+Para hacer una diagonales utiliza bordes de cajas
+*/
+.boton.dos::after{
+    content:"";
+    width: 100%;       
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: calc(-100% - 80px);
+    /*para que se sitúe a la izquierda fuera de la caja y no se vean los bordes, 
+    se calcula el 100% del ancho del elemento,menos el grosor del borde*/
+    border-bottom: 80px solid rgb(117, 79, 163);
+    border-right: 80px solid transparent;   /*Para obtener la diagonal*/
+    transition: 1.5s ease-in-out all;
+}
+.boton.dos:hover:after{
+top:0;
+left: 0;
+}
